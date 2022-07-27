@@ -1,0 +1,23 @@
+
+<h1> danh sách học sinh</h1>
+
+<table >
+    <thead>
+    <tr>
+      <td>STT</td>
+      <td>Name </td>
+      <td>Description</td>
+      <td>Action</td>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let stu of listStudent ; index as i" >
+      <td>{{i+1}}</td>
+      <td>{{stu.name}}</td>
+      <td>{{stu.description}}</td>
+      <td>{{stu.action}}</td>
+      <td><a [routerLink]="['edit',stu.id]">Edit</a></td>
+      <td><a (click)="deleteStudent(stu.id)" >Delete</a></td>
+      <td><a [routerLink]="['/show-detail',stu.id]">Detail</a></td>
+    </tr>
+

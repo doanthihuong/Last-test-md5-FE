@@ -1,0 +1,13 @@
+
+
+<form [formGroup]="form" (submit)="add()" >
+
+  <p>Name</p>
+  <input type="text" formControlName="name" class="form-control"><br>
+  <p>Description</p>
+  <input type="text" formControlName="description" class="form-control"><br>
+  <p>Action</p>
+  <input type="text" formControlName="action" class="form-control"><br>
+
+  <button>Create</button>
+</form>
